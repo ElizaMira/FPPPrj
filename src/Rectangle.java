@@ -1,23 +1,19 @@
-package Inheritance;
+public final class Rectangle {
+    private final double width;
+    private final double length;
 
-public class Rectangle extends Shape{
-    double width;
-    double height;
-    public Rectangle(String color,double weight,double height) {
-        super(color);
-        this.width=weight;
-        this.height=height;
-
-    }
-    @Override
-    public double calculateArea()
-        {
-            return(width*height);
-    }
-    @Override
-    public double calculatePerimeter()
+   public Rectangle(double width, double length)
     {
-        return(2*width+2*height);
-    }
 
+        this.width=width;
+        this.length=length;
+
+    }
+    public double getWidth() {
+        return width;
+    }
+    public double computeArea()
+    {
+        return (width*length);
+    }
 }

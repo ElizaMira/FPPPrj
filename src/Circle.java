@@ -1,20 +1,16 @@
-package Inheritance;
+public final class Circle {
+    private final double radius;
 
-public class Circle extends Shape{
-    double radius;
-    Circle(String color,double radius)
-    {
-        super(color);
-        this.radius=radius;
+
+    public Circle(double radius) {
+        this.radius = radius;
     }
-    @Override
-    public double calculateArea()
+    public double getRadius()
     {
-        return(Math.PI*radius*radius);
+        return radius;
     }
-    @Override
-    public double calculatePerimeter()
+    public double computeArea()
     {
-        return(2*Math.PI*radius);
+        return (Math.PI)*radius*radius;
     }
 }
